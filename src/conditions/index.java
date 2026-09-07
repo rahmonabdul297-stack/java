@@ -5,7 +5,7 @@ String name;
  
     public static void Greet(String name) {
 int currentHour = Time.getTime().hour();
-System.out.println("currentHour:" + " " + currentHour);
+// System.out.println("currentHour:" + " " + currentHour);
         if(currentHour < 12 ){
        System.out.println("Good Morning"+" "+ name +"!");
         }else if(  currentHour == 12 || currentHour < 16 ){
