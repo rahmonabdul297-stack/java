@@ -65,7 +65,6 @@ public class Loop {
             i++;
         }
 
-
         // Do while loop
         int k = 0;
         do {

@@ -1,0 +1,18 @@
+Build a console application that allows a user to track their daily expenses.
+
+Your program should:
+
+Ask for the user's name.
+Ask how much money they have.
+Allow them to enter expenses.
+Store the expenses in an array.
+Calculate:
+Total expenses
+Remaining balance
+Average expense
+Largest expense
+Smallest expense
+Display a simple financial summary.
+
+Concepts to practice:
+Scanner, variables, data types, operators, if/else, loops, arrays, methods.
