@@ -1,9 +1,8 @@
 package assignments;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
-public class assignment {
+public class Assignment {
     public static void main(String[] args) {
         Scanner enterName = new Scanner(System.in);
         System.out.print("Enter your full name: ");
@@ -11,27 +10,56 @@ public class assignment {
         Scanner enterAccountBal = new Scanner(System.in);
         System.out.print("Enter your account balance: ");
         double balance = enterAccountBal.nextDouble();
-        Scanner enterExpense = new Scanner(System.in);
-        System.out.print("Enter your expenses: ");
-        int expenses = enterExpense.nextInt();
-        double[] expensesList = {};
-        double[] addExpensesToexpensesList = new double[expensesList.length + 1];
-        for (int idx = 0; idx < expensesList.length; idx++) {
-            addExpensesToexpensesList[idx] = expensesList[idx];
-        }
-        addExpensesToexpensesList[expensesList.length] = expenses;
-        expensesList = addExpensesToexpensesList;
-        
-    // Total expenses
-    double totalExp=expensesList[0];
-    for(int exp=0; exp <expensesList.length;exp++){
-        expensesList[exp]=totalExp;
-    }
-         int totalXpenses= expensesList.length;
+        double[] expensesList = new double[10];
+        for (int r = 0; r < 10; r++) {
+            do {
+                Scanner enterExpense = new Scanner(System.in);
+                System.out.print("Enter your expenses: ");
+                double expenses = enterExpense.nextDouble();
+                double[] addExpensesToexpensesList = new double[expensesList.length + 1];
 
-        System.out.println("Dear," + fullName + "!\n" + "Your initial account balance is:" + balance + "\n");
+                for (int idx = 0; idx < expensesList.length; idx++) {
+                    addExpensesToexpensesList[idx] = expensesList[idx];
+
+                }
+                addExpensesToexpensesList[expensesList.length] = expenses;
+                expensesList = addExpensesToexpensesList;
+
+            } while (expensesList.length < 10);
+        }
+
+        // Total expenses
+        double totalExpenses = 0;
+        for (int i = 0; i < expensesList.length; i++) {
+            totalExpenses += expensesList[i];
+        }
+        System.out.println("Total expenses: " + totalExpenses);
+        double remainingBalance = balance - totalExpenses;
+        System.out.println("Remaining balance: " + remainingBalance);
+        // Avg of exp
+        double avg = totalExpenses / expensesList.length;
+        // Largest exp
+        double largestExp = expensesList[0];
+        for (int xpIndx = 0; xpIndx < expensesList.length; xpIndx++) {
+            if (expensesList[xpIndx] > largestExp) {
+                largestExp = expensesList[xpIndx];
+            }
+        }
+        // smallest exp
+        double smallestExp = expensesList[0];
+        for (int i = 0; i < expensesList.length; i++) {
+            if (expensesList[i] > smallestExp) {
+                smallestExp = expensesList[i];
+            }
+        }
+        System.out.println("Dear, " + fullName + "!\n" + "Your initial balance is: " + balance + "\n"
+                + "Your total expenses is: " + totalExpenses + "\n" + "Your remaining balance is: " + remainingBalance
+                + "\n" + "Your expenses average is: " + avg + "\n" + "Your Largest expenses is: " + largestExp + "\n"
+                + "Your Smallest expenses is: " + smallestExp + "\n" + "Welcome onboard!");
         enterAccountBal.close();
         enterName.close();
-        enterExpense.close();
+        // enterExpense.close();
+
     }
+
 }
