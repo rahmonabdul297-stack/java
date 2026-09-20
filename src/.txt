@@ -1,18 +1,37 @@
-Build a console application that allows a user to track their daily expenses.
+Java OOP Assignment
 
-Your program should:
+**Question 1 — Student Management System**
 
-Ask for the user's name.
-Ask how much money they have.
-Allow them to enter expenses.
-Store the expenses in an array.
-Calculate:
-Total expenses
-Remaining balance
-Average expense
-Largest expense
-Smallest expense
-Display a simple financial summary.
+Create a Java class called `Student` with the following properties:
 
-Concepts to practice:
-Scanner, variables, data types, operators, if/else, loops, arrays, methods.
+* `name`
+* `matricNumber`
+* `department`
+* `level`
+* `cgpa`
+
+Create a constructor to initialize all the properties. Create a method `displayStudent()` to display the student's information.
+
+In `main()`, create **3 Student objects** and display their information.
+
+---
+
+**Question 2 — Bank Account System**
+
+Create a Java class called `BankAccount` with:
+
+* `accountName`
+* `accountNumber`
+* `balance`
+
+Use a constructor to initialize the properties.
+
+Create methods to:
+
+* `deposit()` money into the account
+* `withdraw()` money from the account
+* `displayAccount()` details
+
+In `main()`, create **2 BankAccount objects**, perform deposits and withdrawals, then display their final account details.
+
+**OOP concepts covered:** Classes, Objects, Constructors, Methods, and Encapsulation.
