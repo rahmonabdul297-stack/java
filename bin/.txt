@@ -1,37 +1,87 @@
-Java OOP Assignment
+🔥 Advanced OOP Challenge — Java
 
-**Question 1 — Student Management System**
+Build a Banking System using OOP.
 
-Create a Java class called `Student` with the following properties:
+Create these classes:
 
-* `name`
-* `matricNumber`
-* `department`
-* `level`
-* `cgpa`
+BankAccount
+SavingsAccount
+CurrentAccount
+Customer
 
-Create a constructor to initialize all the properties. Create a method `displayStudent()` to display the student's information.
+Requirements
 
-In `main()`, create **3 Student objects** and display their information.
+1. BankAccount
 
----
+accountNumber
 
-**Question 2 — Bank Account System**
+accountName
 
-Create a Java class called `BankAccount` with:
+balance
 
-* `accountName`
-* `accountNumber`
-* `balance`
+Make all fields private.
 
-Use a constructor to initialize the properties.
+Create a constructor.
 
-Create methods to:
+Create deposit(), withdraw(), and getBalance() methods.
 
-* `deposit()` money into the account
-* `withdraw()` money from the account
-* `displayAccount()` details
 
-In `main()`, create **2 BankAccount objects**, perform deposits and withdrawals, then display their final account details.
+2. SavingsAccount extends BankAccount
 
-**OOP concepts covered:** Classes, Objects, Constructors, Methods, and Encapsulation.
+Override withdraw().
+
+A savings account must always maintain a minimum balance of ₦5,000.
+
+
+3. CurrentAccount extends BankAccount
+
+Override withdraw().
+
+Allow the customer to withdraw up to ₦20,000 beyond the current balance as an overdraft.
+
+
+4. Customer
+
+name
+
+customerId
+
+Store multiple bank accounts belonging to the customer.
+
+Add a method to display all the customer's accounts.
+
+
+Main challenge
+
+In main():
+
+1. Create one Customer.
+
+
+2. Create a SavingsAccount and a CurrentAccount.
+
+
+3. Add both accounts to the customer.
+
+
+4. Deposit money into both accounts.
+
+
+5. Attempt different withdrawals.
+
+
+6. Display the customer's accounts and final balances.
+
+
+
+💀 Extra requirement
+
+You must use polymorphism.
+
+For example, your accounts should be stored like:
+
+BankAccount[] accounts = new BankAccount[2];
+
+Then use a loop to perform operations on them.
+
+Don't create separate withdrawal logic in main() for Savings and Current accounts.
