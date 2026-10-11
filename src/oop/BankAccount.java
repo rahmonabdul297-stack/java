@@ -1,9 +1,9 @@
 package oop;
 
 public class BankAccount {
-    String accountNumber;
-    double balance;
-    String accountName;
+    private String accountNumber;
+    private double balance;
+    private String accountName;
 
     BankAccount(String accNum, String accName, double bal) {
         accNum = accountNumber;
@@ -25,12 +25,7 @@ public class BankAccount {
         return balance;
     }
 
-    public String getName() {
-        return accountName;
+    public void setBal(double balance) {
+        this.balance = balance;
     }
-
-    public String getAccountName() {
-        return accountName;
-    }
-
 }
