@@ -24,8 +24,6 @@ public class Customer {
         System.out.println("Customer ID : " + customerId);
         System.out.println("----------------------------------------");
         for (BankAccount acc : accounts) {
-            System.out.println("Account No  : " + acc.accountNumber);
-            System.out.println("Account Type: " + acc.accountName);
             System.out.println("Balance     : ₦" + acc.getBalance());
             System.out.println("----------------------------------------");
         }

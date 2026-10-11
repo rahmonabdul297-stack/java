@@ -25,4 +25,12 @@ public class BankAccount {
         return balance;
     }
 
+    public String getName() {
+        return accountName;
+    }
+
+    public String getAccountName() {
+        return accountName;
+    }
+
 }
