@@ -5,10 +5,10 @@ public class BankAccount {
     private double balance;
     private String accountName;
 
-    BankAccount(String accNum, String accName, double bal) {
-        accNum = accountNumber;
-        accName = accountName;
-        bal = balance;
+    BankAccount(String accountNumber, String accountName, double balance) {
+        this.accountNumber = accountNumber;
+        this.accountName = accountName;
+        this.balance = balance;
     }
 
     public double deposit(double amount) {
@@ -27,5 +27,13 @@ public class BankAccount {
 
     public void setBal(double balance) {
         this.balance = balance;
+    }
+
+    public String getAccountNumber() {
+        return accountNumber;
+    }
+
+    public String getAccountName() {
+        return accountName;
     }
 }

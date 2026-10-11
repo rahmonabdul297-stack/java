@@ -11,16 +11,19 @@ public class SavingsAccount extends BankAccount {
 
     @Override
     public double withdraw(double amount) {
-        double bal = getBalance();
-       if(amount >0){
-         if (getBalance() - amount >= miniBal) {
-            System.out.println("Successfully withdrew: " + miniBal);
-        }else{
-            System.out.println("withdrawal failed!"); 
+        double checkBal = getBalance() - amount;
+        if (amount > 0) {
+            if (checkBal < miniBal) {
+                System.out.println("withdrawal failed: you can't withdraw such amount, try the lesser one");
+            } else {
+                setBal(checkBal);
+                System.out.println("Successfully withdrew $" + amount);
+                System.out.println("Your remaining balance is $" + checkBal);
+            }
+        } else {
+            System.out.println("To withdraw from this account enter valid amount!");
         }
-       }else{
-        System.out.println("invalid withdrawal amount!");
-       }
-       return bal;
+        return 0.0;
     }
+
 }
